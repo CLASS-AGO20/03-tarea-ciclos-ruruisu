@@ -54,7 +54,25 @@ export default class  App {
     }
 
     //
-    obtenerImpares(){
+    obtenerImpares(num1, num2){
+        let string = "";
+        if(num1 > num2){
+            for (let i = num1; i > num2; i--) {
+                if(i % 2 != 0 && i != num1){
+                    string = string.concat(i,",")
+                }
+            }
+            string = string.concat(num2);   
+        }else if(num2 > num1){
+            for (let i = num2; i > num1; i--) {
+                if(i % 2 != 0 && i != num2){
+                    string = string.concat(i,",")
+                }
+            }
+            string = string.concat(num1);
+        }
+
+        return string;
 
     }
 
@@ -67,6 +85,7 @@ console.log(app.sumatoriaSerieUno(7));
 console.log(app.sumatoriaSerieDos(6));
 console.log(app.esPrimo(9));
 console.log(app.obtenerMultiplos(10,25));
+console.log(app.obtenerImpares(,10));
 
 
 
