@@ -57,6 +57,7 @@ export default class  App {
     obtenerImpares(num1, num2){
         let string = "";
         if(num1 > num2){
+
             for (let i = num1; i > num2; i--) {
                 if(i % 2 != 0 && i != num1){
                     string = string.concat(i,",")
@@ -64,6 +65,7 @@ export default class  App {
             }
             string = string.concat(num2);   
         }else if(num2 > num1){
+
             for (let i = num2; i > num1; i--) {
                 if(i % 2 != 0 && i != num2){
                     string = string.concat(i,",")
@@ -85,7 +87,7 @@ console.log(app.sumatoriaSerieUno(7));
 console.log(app.sumatoriaSerieDos(6));
 console.log(app.esPrimo(9));
 console.log(app.obtenerMultiplos(10,25));
-console.log(app.obtenerImpares(10));
+console.log(app.obtenerImpares(5,10));
 
 
 
