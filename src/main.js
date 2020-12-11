@@ -59,19 +59,30 @@ export default class  App {
         if(num1 > num2){
 
             for (let i = num1; i > num2; i--) {
-                if(i % 2 != 0 && i != num1){
+                if(i % 2 != 0){
                     string = string.concat(i,",")
+                    if(i > num1 + 1){
+                        string = string.concat(",");
+                    }
                 }
             }
-            string = string.concat(num2);   
+            if(num2 % 2 != 0){
+                string = string.concat(num2);
+            }
         }else if(num2 > num1){
 
             for (let i = num2; i > num1; i--) {
-                if(i % 2 != 0 && i != num2){
-                    string = string.concat(i,",")
+                if(i % 2 != 0){
+                    string = string.concat(i)
+                    if(i > num1 + 1){
+                        string = string.concat(",");
+                }
+
                 }
             }
+            if(num1 % 2 != 0){
             string = string.concat(num1);
+            }
         }
 
         return string;
@@ -87,7 +98,7 @@ console.log(app.sumatoriaSerieUno(7));
 console.log(app.sumatoriaSerieDos(6));
 console.log(app.esPrimo(9));
 console.log(app.obtenerMultiplos(10,25));
-console.log(app.obtenerImpares(5,10));
+console.log(app.obtenerImpares(13,21));
 
 
 
